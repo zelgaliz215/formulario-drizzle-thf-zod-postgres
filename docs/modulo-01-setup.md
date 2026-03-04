@@ -76,8 +76,8 @@ cd documentos-app
 ### Dependencias de Base de Datos (Drizzle + PostgreSQL)
 
 ```bash
-npm install drizzle-orm postgres
-npm install -D drizzle-kit @types/pg
+pnpm install drizzle-orm postgres
+pnpm install -D drizzle-kit @types/pg
 ```
 
 - `drizzle-orm`: El ORM principal
@@ -88,7 +88,7 @@ npm install -D drizzle-kit @types/pg
 ### Dependencias de Validación y Formularios
 
 ```bash
-npm install zod react-hook-form @hookform/resolvers drizzle-zod
+pnpm install zod react-hook-form @hookform/resolvers drizzle-zod
 ```
 
 - `zod`: Validación de schemas
@@ -101,7 +101,7 @@ npm install zod react-hook-form @hookform/resolvers drizzle-zod
 Inicializa Shadcn/ui:
 
 ```bash
-npx shadcn@latest init
+pnpm dlx shadcn@latest init
 ```
 
 Selecciona estas opciones:
@@ -115,7 +115,7 @@ Selecciona estas opciones:
 Instala los componentes que usaremos:
 
 ```bash
-npx shadcn@latest add button input label textarea select checkbox radio-group calendar popover form card table badge dialog alert-description sonner
+pnpm dlx shadcn@latest add button input label textarea select checkbox radio-group calendar popover form card table badge dialog sonner alert-dialog
 ```
 
 ### Dependencias Adicionales
