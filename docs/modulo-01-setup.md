@@ -567,13 +567,13 @@ pnpx shadcn@latest add button
 
 En este módulo hemos:
 
-1. ✅ Creado un proyecto Next.js 16 con TypeScript y Tailwind
-2. ✅ Instalado Drizzle ORM con PostgreSQL
-3. ✅ Configurado Zod y React Hook Form
-4. ✅ Inicializado Shadcn/ui con los componentes necesarios
-5. ✅ Configurado PostgreSQL con Docker
-6. ✅ Creado la estructura de carpetas del proyecto
-7. ✅ Definido tipos globales para Server Actions
+- [ ] Creado un proyecto Next.js 16 con TypeScript y Tailwind
+- [ ] Instalado Drizzle ORM con PostgreSQL
+- [ ] Configurado Zod y React Hook Form
+- [ ] Inicializado Shadcn/ui con los componentes necesarios
+- [ ] Configurado PostgreSQL con Docker
+- [ ] Creado la estructura de carpetas del proyecto
+- [ ] Definido tipos globales para Server Actions
 
 ---
 

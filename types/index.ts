@@ -1,3 +1,4 @@
+// Tipos globales compartidos
 // Tipo genérico para respuestas de Server Actions
 export type ActionResponse<T = void> =
   | { success: true; data: T }
