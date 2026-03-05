@@ -23,5 +23,8 @@ export const db = drizzle(client, {
     logger: process.env.NODE_ENV === "development", // Muestra las queries en consola en desarrollo
 });
 
+// Re-exportar todo el schema para conveniencia
+export * from './schema';
+
 // Exportar los tipos de la base de datos
 export type Database = typeof db;
