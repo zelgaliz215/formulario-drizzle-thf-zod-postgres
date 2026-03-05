@@ -10,13 +10,15 @@ export type FormState = {
   message?: string;
 };
 
-// Tipo para paginación
+// ============================================
+// Tipos para paginación
+// ============================================
+
 export type PaginationParams = {
   page: number;
   pageSize: number;
 };
 
-// Tipo para respuestas paginadas
 export type PaginatedResponse<T> = {
   data: T[];
   pagination: {
@@ -24,5 +26,33 @@ export type PaginatedResponse<T> = {
     pageSize: number;
     totalItems: number;
     totalPages: number;
+    hasNextPage: boolean;
+    hasPrevPage: boolean;
   };
 };
+
+// ============================================
+// Tipos para filtros de documentos
+// ============================================
+
+export type DocumentoFiltros = {
+  busqueda?: string;
+  tipo?: string;
+  estado?: string;
+  prioridad?: string;
+  esConfidencial?: boolean;
+  fechaDesde?: string;
+  fechaHasta?: string;
+};
+
+// ============================================
+// Re-exportar tipos de la base de datos
+// ============================================
+
+export type {
+  Documento,
+  NuevoDocumento,
+  TipoDocumento,
+  EstadoDocumento,
+  PrioridadDocumento,
+} from "@/db/schema";
