@@ -222,10 +222,10 @@ import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
   // Ubicación de los archivos de schema
-  schema: "./src/db/schema/index.ts",
+  schema: "./db/schema/index.ts",
 
   // Carpeta donde se guardarán las migraciones
-  out: "./src/db/migrations",
+  out: "./db/migrations",
 
   // Dialecto de base de datos
   dialect: "postgresql",
@@ -246,10 +246,10 @@ export default defineConfig({
 Crea la estructura de carpetas:
 
 ```bash
-mkdir -p src/db/schema src/db/migrations
+mkdir -p db/schema db/migrations
 ```
 
-Crea el archivo `src/db/index.ts`:
+Crea el archivo `db/index.ts`:
 
 ```typescript
 import { drizzle } from "drizzle-orm/postgres-js";
