@@ -114,3 +114,24 @@ Se implementó un archivo centralizado en `@/types/index.ts` que re-exporta los 
 2. **Punto Único de Verdad:** Todos los tipos de negocio residen en un mismo lugar.
 3. **Mantenibilidad:** Si el schema cambia de ubicación, solo se actualiza una línea en el archivo de tipos central.
 4. **Seguridad:** Evita dependencias circulares al importar desde un archivo de tipos puro (.ts) en lugar de uno con lógica de base de datos.
+
+---
+
+## 5. Tipos de TypeScript vs. Migraciones de Base de Datos
+
+### Problema
+
+Incertidumbre sobre si añadir exportaciones de tipos (como `Documento = typeof documentos.$inferSelect`) requiere generar (`generate`) y aplicar (`migrate`) una nueva migración.
+
+### Causa
+
+Confusión entre los archivos de esquema que definen la estructura física (SQL) y las utilidades de TypeScript que definen la forma de los datos para el compilador.
+
+### Solución
+
+No es necesario migrar. Las utilidades de inferencia de tipos de Drizzle (`$inferSelect`, `$inferInsert`) son **puramente TypeScript**.
+
+**Regla de Oro:**
+
+- **Requiere Migración:** Cambios en `pgTable`, `pgEnum`, añadir/quitar columnas, cambiar tipos de datos SQL, índices o restricciones (`notNull`, `unique`).
+- **No Requiere Migración:** Añadir `export type`, cambiar nombres de variables de TypeScript que no afecten el nombre de la columna en Postgres, o añadir lógica de validación que solo vive en el código.
